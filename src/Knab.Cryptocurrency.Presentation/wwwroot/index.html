@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin Price Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl max-w-md w-full border border-gray-700">
+      <div class="flex items-center justify-between mb-8">
+        <h1 class="text-2xl font-bold">Bitcoin Price Tracker</h1>
+        <span style="display: none;" id="loading">Loading...</span>
+        <button id="refresh-button" class="p-2 rounded-full hover:bg-gray-700 transition-colors" title="Refresh price">
+          Refresh
+        </button>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <label for="crypto-select" class="block text-sm font-medium mb-2">
+            Select Crypto Currency
+          </label>
+          <select id="crypto-select"
+            class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="BNB">Binance Coin</option>
+            <option value="DOT">Polkadot</option>
+          </select>
+        </div>
+
+        <div id="price-container" class="transition-opacity duration-200">
+          <div class="bg-gray-700/50 rounded-lg p-6 space-y-4">
+            <div>
+              <div class="text-gray-400 text-sm mb-1">Trading Pair</div>
+              <div class="text-xl font-semibold" id="price-container__trading-pair"></div>
+            </div>
+            <div>
+              <div class="text-gray-400 text-sm mb-1">Current Price</div>
+              <div class="text-3xl font-bold" id="price-container__price">
+              </div>
+            </div>
+            <div class="text-xs text-gray-400" id="price-container__last-updated">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

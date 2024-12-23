@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DC210A7C-858B-4F1E-9A6B-40E3836FD96B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FD27E692-0389-4A13-BC99-DA791CCB59CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Cryptocurrency.Domain", "src\Knab.Cryptocurrency.Domain\Knab.Cryptocurrency.Domain.csproj", "{B5245174-39A1-4915-A5FD-8E77A9F8BE02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Cryptocurrency.Infrastructure", "src\Knab.Cryptocurrency.Infrastructure\Knab.Cryptocurrency.Infrastructure.csproj", "{26F31249-E394-4B64-92FF-9B93D395EBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Cryptocurrency.Application", "src\Knab.Cryptocurrency.Application\Knab.Cryptocurrency.Application.csproj", "{8C11937E-F3D2-47B9-983A-A35345454D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Cryptocurrency.Presentation", "src\Knab.Cryptocurrency.Presentation\Knab.Cryptocurrency.Presentation.csproj", "{7A623EAC-E282-482F-9D83-63E5F1745E56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Cryptocurrency.Tests", "tests\Knab.Cryptocurrency.Tests\Knab.Cryptocurrency.Tests.csproj", "{92555FF6-FE76-4B2E-94F6-CD86FA4358F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5245174-39A1-4915-A5FD-8E77A9F8BE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5245174-39A1-4915-A5FD-8E77A9F8BE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5245174-39A1-4915-A5FD-8E77A9F8BE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5245174-39A1-4915-A5FD-8E77A9F8BE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F31249-E394-4B64-92FF-9B93D395EBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F31249-E394-4B64-92FF-9B93D395EBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F31249-E394-4B64-92FF-9B93D395EBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F31249-E394-4B64-92FF-9B93D395EBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C11937E-F3D2-47B9-983A-A35345454D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C11937E-F3D2-47B9-983A-A35345454D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C11937E-F3D2-47B9-983A-A35345454D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C11937E-F3D2-47B9-983A-A35345454D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A623EAC-E282-482F-9D83-63E5F1745E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A623EAC-E282-482F-9D83-63E5F1745E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A623EAC-E282-482F-9D83-63E5F1745E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A623EAC-E282-482F-9D83-63E5F1745E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92555FF6-FE76-4B2E-94F6-CD86FA4358F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92555FF6-FE76-4B2E-94F6-CD86FA4358F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92555FF6-FE76-4B2E-94F6-CD86FA4358F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92555FF6-FE76-4B2E-94F6-CD86FA4358F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5245174-39A1-4915-A5FD-8E77A9F8BE02} = {DC210A7C-858B-4F1E-9A6B-40E3836FD96B}
+		{26F31249-E394-4B64-92FF-9B93D395EBF8} = {DC210A7C-858B-4F1E-9A6B-40E3836FD96B}
+		{8C11937E-F3D2-47B9-983A-A35345454D00} = {DC210A7C-858B-4F1E-9A6B-40E3836FD96B}
+		{7A623EAC-E282-482F-9D83-63E5F1745E56} = {DC210A7C-858B-4F1E-9A6B-40E3836FD96B}
+		{92555FF6-FE76-4B2E-94F6-CD86FA4358F5} = {FD27E692-0389-4A13-BC99-DA791CCB59CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A7DF440-D2F2-439C-9F21-3711C50FC9E4}
+	EndGlobalSection
+EndGlobal

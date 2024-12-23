@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>49b425d2-bf4d-4c87-92b2-0393d31e1bd9</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Knab.Cryptocurrency.Application\Knab.Cryptocurrency.Application.csproj" />
+    <ProjectReference Include="..\Knab.Cryptocurrency.Domain\Knab.Cryptocurrency.Domain.csproj" />
+    <ProjectReference Include="..\Knab.Cryptocurrency.Infrastructure\Knab.Cryptocurrency.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
