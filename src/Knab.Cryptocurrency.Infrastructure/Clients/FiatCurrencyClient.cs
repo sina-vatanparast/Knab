@@ -23,6 +23,11 @@ namespace Knab.Cryptocurrency.Infrastructure.Clients
                 throw new Exception("Failed to fetch the latest quotes from fiat currency server.");
             }
 
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                throw new Exception("Api key provided for FiatCurrencyApi in appsetting.json is not valid");
+            }
+
             return await response.ParseJsonResponseAsync<FiatExchangeRateListResponse>("latest exchange rates", cancellationToken);
         }
     }

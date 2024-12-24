@@ -35,6 +35,11 @@ namespace Knab.Cryptocurrency.Infrastructure.Clients
                 throw new Exception("Failed to fetch the latest quote from crypto currency server.");
             }
 
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                throw new Exception("Api key provided for CryptoCurrencyApi in appsetting.json is not valid");
+            }
+
             return await response.ParseJsonResponseAsync<CryptoCurrencyQuoteResponse>("latest quote", cancellationToken);
         }
 
@@ -55,6 +60,11 @@ namespace Knab.Cryptocurrency.Infrastructure.Clients
             if (response is null)
             {
                 throw new Exception("Failed to fetch the latest cryptocurrencies from crypto currency server.");
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                throw new Exception("Api key provided for CryptoCurrencyApi in appsetting.json is not valid");
             }
 
             return await response.ParseJsonResponseAsync<CryptoCurrencyListResponse>("currency list", cancellationToken);
