@@ -19,12 +19,12 @@ namespace Knab.Cryptocurrency.Application.Handlers
 
             if(quotes?.Any() != true)
             {
-                throw new Exception();
+                throw new Exception("No quotes are available for this currency");
             }
 
             if(request.DefaultFiatCurrencyCode != quotes.First().BaseCurrency.Code)
             {
-                throw new Exception();
+                throw new Exception("The default fiat value in setting is not supported");
             }
 
             var defaultExchangeRate = defaultPair.ExchangeRate;

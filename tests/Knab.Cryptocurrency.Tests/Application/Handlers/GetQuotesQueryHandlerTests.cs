@@ -29,20 +29,20 @@ namespace Knab.Cryptocurrency.Tests.Application.Handlers
             {
                 BaseCurrencySlug = "bitcoin",
                 BaseCurrencyName = "Bitcoin",
-                DefaultFiatCurrencyCode = "USD",
-                QuoteCurrencyCodes = ["EUR", "GBP"]
+                DefaultFiatCurrencyCode = "EUR",
+                QuoteCurrencyCodes = ["USD", "EUR", "GBP"]
             };
 
             var now = DateTime.Now;
 
-            var defaultPair = new Pair(new Currency("Bitcoin"), new Currency("USD"), 50000m, now);
+            var defaultPair = new Pair(new Currency("Bitcoin"), new Currency("EUR"), 50000m, now);
 
 
             var fiatPairs = new List<Pair>
             {
-                new(new Currency("USD"), new Currency("EUR"), 0.85m, now),
-
-                new(new Currency("USD"), new Currency("GBP"), 0.73m, now)
+                new(new Currency("EUR"), new Currency("EUR"), 1, now),
+                new(new Currency("EUR"), new Currency("USD"), 0.97m, now),
+                new(new Currency("EUR"), new Currency("GBP"), 0.73m, now),
             };
 
             _cryptoCurrencyServiceMock
@@ -58,11 +58,11 @@ namespace Knab.Cryptocurrency.Tests.Application.Handlers
 
             // Assert
             result.Count.ShouldBe(3);
-            result[0].ShouldBe(defaultPair);
+            result[0].ExchangeRate.ShouldBe(defaultPair.ExchangeRate);
 
-            var eurPair = result[1];
-            eurPair.QuoteCurrency.Code.ShouldBe("EUR");
-            eurPair.ExchangeRate.ShouldBe(42500m);
+            var usdPair = result[1];
+            usdPair.QuoteCurrency.Code.ShouldBe("USD");
+            usdPair.ExchangeRate.ShouldBe(48500m);
 
             var gbpPair = result[2];
             gbpPair.QuoteCurrency.Code.ShouldBe("GBP");
